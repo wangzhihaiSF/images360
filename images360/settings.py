@@ -12,6 +12,22 @@
 BOT_NAME = 'images360'
 MAX_PAGE = 50
 
+MONGO_URI = "localhost"
+MONGO_DB = "images360"
+
+MYSQL_HOST = 'localhost'
+MYSQL_DATABASE = 'images360'
+MYSQL_USER = 'root'
+MYSQL_PASSWORD = 'a198913b'
+MYSQL_PORT = 3306
+
+IMAGES_STORE = "./images"
+ITEM_PIPELINES = {
+    'images360.pipelines.ImagePipeline': 300,
+    'images360.pipelines.MongoPipeline': 301,
+    'images360.pipelines.MySqlPipeline': 302,
+}
+
 SPIDER_MODULES = ['images360.spiders']
 NEWSPIDER_MODULE = 'images360.spiders'
 

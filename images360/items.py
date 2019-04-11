@@ -4,11 +4,15 @@
 #
 # See documentation in:
 # https://doc.scrapy.org/en/latest/topics/items.html
+from scrapy import Item, Field
 
-import scrapy
 
+class ImageItem(Item):
+    # 定义MongoDB 和MySQL 存储的表名
+    collection = table = "images"
+    id = Field()
+    url = Field()
+    title = Field()
+    thumb = Field()
+    tag = Field()
 
-class Images360Item(scrapy.Item):
-    # define the fields for your item here like:
-    # name = scrapy.Field()
-    pass
